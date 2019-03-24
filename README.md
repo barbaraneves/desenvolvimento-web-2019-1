@@ -2,7 +2,7 @@
 
 ## Tecnologias
 
-HTML, CSS, JavaScript, Bootstrap, Java e Spring Boot.
+HTML, CSS, JavaScript, Bootstrap e Spring Boot.
 
 ### Tópico 1
 
