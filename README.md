@@ -1,5 +1,3 @@
-# Desenvolvimento Web
-
 ## Tecnologias
 
 HTML, CSS, JavaScript, Bootstrap e Spring Boot.
