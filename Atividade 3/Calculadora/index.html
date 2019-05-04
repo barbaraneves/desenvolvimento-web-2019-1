@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<!--
+    Atividade 3 
+    Bárbara Neves, 388713
+    Questão 1. Calculadora
+-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Calculadora</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="CSS/style.css">
+
+    <script src="JS/script.js"></script>
+</head>
+
+<body>
+
+    <h1>Calculadora</h1>
+
+    <form name="calculadoraForm" method="post" action="">
+        <p>Esta calculadora apenas faz operações simples!</p>
+
+        <label for="numero1">Digite o 1º número:</label>
+        <input type="text" name="numero1" id="numero1">
+        <br><br>
+
+        <label for="numero2">Digite o 2º número:</label>
+        <input type="text" name="numero2" id="numero2">
+        <br><br>
+
+        <label for="operacao">Selecione a operação:</label>
+        <select name="operacao" id="operacao">
+            <option value="somar">Adição</option>
+            <option value="subtrair">Subtração</option>
+            <option value="multiplicar">Multiplicação</option>
+            <option value="dividir">Divisão</option>
+        </select>
+        <br><br>
+
+        <input type="button" value="Calcular" class="botao" onClick="calculadora(document.calculadoraForm.operacao.value)"><br><br>
+        <input type="reset" value="Limpar" class="botao"><br><br>
+
+        <label for="resultado">Resultado:</label><br>
+        <input type="text" name="resultado" id="resultado">
+
+    </form>
+</body>
+
+</html>
