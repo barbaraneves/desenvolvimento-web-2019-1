@@ -1,0 +1,129 @@
+body,
+html {
+    height: 100%;
+    font-family: "Courier New", Courier, monospace !important;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.bg-img {
+    background-image: url('floresta.jpg');
+    min-height: 638px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.container {
+    position: absolute;
+    right: 0;
+    margin: 150px;
+    max-width: 300px;
+    padding: 16px;
+    background-color: white;
+}
+
+input[type=text],
+input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=text]:focus,
+input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.9;
+    width: 100%;
+}
+
+.btn:hover {
+    opacity: 1;
+}
+
+.btn-sucesso {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    padding: 16px 671px;
+}
+
+.btn-erro {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    padding: 16px 667px;
+}
+
+.btn-sucesso:hover,
+.btn-erro:hover {
+    opacity: 1;
+}
+
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+.bgimg {
+    background-image: url('floresta.jpg');
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    color: white;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 25px;
+}
+
+.bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 11px;
+}
+
+.middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+hr {
+    margin: auto;
+    width: 40%;
+}
