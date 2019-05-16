@@ -1,6 +1,12 @@
+# Desenvolvimento de Software para Web
+
+Repositório que contém as atividades da disciplina de Desenvolvimento de Software para Web.
+
 ## Tecnologias
 
 HTML, CSS, JavaScript, Bootstrap e Spring Boot.
+
+## Tópicos
 
 ### Tópico 1
 
