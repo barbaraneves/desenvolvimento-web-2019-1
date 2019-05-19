@@ -8,7 +8,7 @@ public class TesteProprietario {
 	public static void main(String[] args) {
 		ProprietarioDAO proprietarioDAO = new ProprietarioDAO();
 		
-		// Adicionando o proprietário 1
+		/* Adicionando o proprietário 1 */
 		Proprietario barbara = new Proprietario();
 		barbara.setNome("Bárbara Neves");
 		barbara.setTelefone("(85) 9.1234-5678");
@@ -24,7 +24,7 @@ public class TesteProprietario {
 		
 		proprietarioDAO.adicionar(dany);
 		
-		// Adicionando o proprietário 3
+		/* Adicionando o proprietário 3 */
 		Proprietario jon = new Proprietario();
 		jon.setNome("Jon Snow");
 		jon.setTelefone("(23) 4.5678-9123");
@@ -32,7 +32,7 @@ public class TesteProprietario {
 		
 		proprietarioDAO.adicionar(jon);
 		
-		// Adicionando o proprietário 4
+		/* Adicionando o proprietário 4 */
 		Proprietario tyrion = new Proprietario();
 		tyrion.setNome("Tyrion Lannister");
 		tyrion.setTelefone("(45) 6.7891-2345");
@@ -40,16 +40,26 @@ public class TesteProprietario {
 		
 		proprietarioDAO.adicionar(tyrion);
 		
-		// Adicionando o proprietário 5
+		/* Adicionando o proprietário 5 */
 		Proprietario arya = new Proprietario();
 		arya.setNome("Arya Stark");
 		arya.setTelefone("(67) 8.9123-4567");
 		arya.setEmail("arya@not.today.com");
-		
+
 		proprietarioDAO.adicionar(arya);
 		
-//		proprietarioDAO.remover(2L);
-//		proprietarioDAO.remover(4L);
+		/* Removendo o proprietário 4 */
+//		proprietarioDAO.remover(6L);
 		
+		/* Atualizando o proprietário 1 */
+//		Proprietario sansa = proprietarioDAO.buscar(1L);
+//		sansa.setNome("Sansa Stark");
+//		sansa.setTelefone("(85) 9.1234-5678");
+//		sansa.setEmail("sansa@queen.in.the.north.com");	
+		
+//		proprietarioDAO.atualizar(sansa);
+		
+		/* Listar os 4 proprietários presentes no banco */
+//		System.out.println("Proprietários: \n" + proprietarioDAO.listar());
 	}
 }
