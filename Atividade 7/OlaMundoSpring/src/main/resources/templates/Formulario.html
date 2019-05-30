@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 
 <head>
 	<meta charset="UTF-8">
@@ -8,11 +8,13 @@
 
 <body>
 
-	<form action="/pessoa/salvar" method="POST">
-		Nome: <input type="text" name="nome"> <br>
+	<form action="/pessoa/salvar" method="POST" th:object="${pessoa}">
+		<input type="hidden" th:field="*{codigo}">
+	
+		Nome: <input type="text" th:field="*{nome}"> <br>
 		
 		<!-- O nome do input tem que está igual ao que é pedido no name -->
-		Serie: <input type="text" name="serie"> <br>
+		Serie: <input type="text" th:field="*{serie}"> <br>
 		
 		<input type="submit" value="Cadastrar">
 	</form>

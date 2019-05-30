@@ -8,5 +8,4 @@ import com.ufc.br.model.Pessoa;
 @Repository
 public interface PessoaRepository extends JpaRepository<Pessoa, Long> {
 	
-	
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 
 <head>
 <meta charset="UTF-8">
@@ -15,13 +15,22 @@
 				<th scope="col">Codigo</th>
 				<th scope="col">Nome</th>
 				<th scope="col">Serie</th>
+				<th></th>
 			</tr>
 		</thead>
 		<tbody>
-			<tr>
-				<td>1</td>
-				<td>Mark</td>
-				<td>Otto</td>
+			<!-- Fazendo um for each para que seja impresso as pessoas presentes no banco -->
+			<tr th:each="pessoa : ${listaDePessoas}">
+				<td th:text="${pessoa.codigo}"></td>
+				<td th:text="${pessoa.nome}"></td>
+				<td th:text="${pessoa.serie}"></td>
+				<td><a
+					th:href="@{/pessoa/atualizar/{codigo}(codigo = ${pessoa.codigo})}"
+					class="btn btn-warning">Atualizar </a></td>
+				<td><a
+					th:href="@{/pessoa/excluir/{codigo}(codigo = ${pessoa.codigo})}"
+					class="btn btn-danger">Excluir </a></td>
+
 			</tr>
 		</tbody>
 	</table>
