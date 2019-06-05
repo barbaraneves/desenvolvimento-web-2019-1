@@ -1,12 +1,12 @@
-package com.ufc.br.service;
+package atividade7.com.br.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.ufc.br.model.Pessoa;
-import com.ufc.br.repository.PessoaRepository;
+import atividade7.com.br.model.Pessoa;
+import atividade7.com.br.repository.PessoaRepository;
 
 @Service
 public class PessoaService {
@@ -35,6 +35,4 @@ public class PessoaService {
 		
 		return pessoaRepository.getOne(codigo);
 	}
-
-	
 }

@@ -1,4 +1,4 @@
-package com.ufc.br.controller;
+package atividade7.com.br.controller;
 
 import java.util.List;
 
@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.ufc.br.model.Pessoa;
-import com.ufc.br.service.PessoaService;
+import atividade7.com.br.model.Pessoa;
+import atividade7.com.br.service.PessoaService;
 
 @Controller
 @RequestMapping("/pessoa")
@@ -34,7 +34,7 @@ public class PessoaController {
 		//Cadastrando um pessoa no banco
 		pessoaService.cadastrar(pessoa);
 		
-		return "OlaMundo";
+		return "Sucesso";
 	}
 	
 	@RequestMapping("/lista-de-pessoas")

@@ -1,4 +1,4 @@
-package com.ufc.br.model;
+package atividade7.com.br.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
