@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<!--
+    Trabalho 1 de Desenvolvimento de Software para Web
+    Login do Usuário
+    Bárbara Neves, 388713
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MANTIS | CULINÁRIA CHINESA</title>
+
+    <link rel="icon" href="../Imagens/icon.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="../Imagens/icon.png" type="image/x-icon" />
+
+    <!-- Estilo do site -->
+    <link rel="stylesheet" type="text/css" media="screen" href="../CSS/style.css">
+
+    <!-- Fonte do site -->
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+
+    <!-- Icons para a barra de navegação -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"></script>
+</head>
+
+<body>
+
+    <!-- Barra de navegação -->
+
+    <div class="navbar">
+        <nav class="navbar-header">
+            <a href="cardapio.html"><i class="fas fa-utensils"></i>  Cardápio</a>
+            <a href="sobre.html"><i class="fas fa-store"></i> Sobre</a>
+            <a href="contato.html"><i class="fa fa-envelope"></i> Contato</a>
+            <a href="home.html"><img src="../Imagens/logo.png" alt class="logo-mobile"></a>
+            <a href="javascript:void(0)" class="dropdown"><i class="far fa-clock"></i>
+                <span>Aberto até às 23h</span> 
+                <div class="dropdown-content">
+                    <p class="corPrimaria">Todos os dias das 11 às 15h e 18 às 23h</p>
+                </div>
+                <i class="fas fa-angle-down"></i>
+            </a>
+            <div class="dropdown-content">
+
+            </div>
+            <a href="entrar.html"><i class="fa fa-fw fa-user"></i> Meus Pedidos</a>
+        </nav>
+    </div>
+
+    <!-- Login -->
+    <div class="login">
+        <form method="POST" class="login-form">
+            <h4 class="login-titulo">IDENTIFICAÇÃO</h4><br>
+            <div class="form-box">
+                <div class="form-box-label">E-mail</div>
+                <input type="email" name="email" id="input-email" class="form-input">
+            </div>
+
+            <div class="form-box">
+                <div class="form-box-label">CPF</div>
+                <input type="text" name="cli_cpf" id="input-cpf" class="form-input" value maxlength="14">
+            </div>
+
+            <div class="form-box">
+                <input type="submit" value="Continuar">
+            </div>
+        </form>
+    </div>
+
+    <!-- Rodapé -->
+
+    <footer class="rodape">
+        <ul>
+            <li>
+                <i class="rodape-item-1 fab fa-whatsapp"></i> (88) 9.9287-1532
+                <i class="rodape-item-2 fas fa-calendar-day"></i> Fundado em: Abril de 2008.
+                <i class="rodape-item-3 fas fa-map-marker-alt"></i> Universidade Federal do Ceará.
+
+            </li>
+            <li>
+                <i class="rodape-item-1 fas fa-file-code"></i> Powered by: Bárbara Stéph. Neves.
+            </li>
+            <li class="rodape-content">
+                <i class="rodape-content"></i>2019 © Todos os direitos reservados.
+            </li>
+        </ul>
+    </footer>
+
+    <!-- Formatação do campo CPF do formulário -->
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#input-cpf").mask('000.000.000-00', {
+                reverse: false
+            });
+        });
+    </script>
+
+</body>
+
+</html>

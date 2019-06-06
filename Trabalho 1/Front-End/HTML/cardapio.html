@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<!--
+    Trabalho 1 de Desenvolvimento de Software para Web
+    Galeria de Pratos
+    Bárbara Neves, 388713
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MANTIS | CULINÁRIA CHINESA</title>
+
+    <link rel="icon" href="../Imagens/icon.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="../Imagens/icon.png" type="image/x-icon" />
+
+    <!-- Estilo do site -->
+    <link rel="stylesheet" type="text/css" media="screen" href="../CSS/style.css">
+
+    <!-- Fonte do site -->
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+
+    <!-- Icons para a barra de navegação -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <!-- Script do site -->
+    <script src="../JS/jquery.js"></script>
+</head>
+
+<body>
+
+    <!-- Barra de navegação -->
+
+    <div class="navbar">
+        <nav class="navbar-header">
+            <a href="cardapio.html"><i class="fas fa-utensils"></i>  Cardápio</a>
+            <a href="sobre.html"><i class="fas fa-store"></i> Sobre</a>
+            <a href="contato.html"><i class="fa fa-envelope"></i> Contato</a>
+            <a href="home.html"><img src="../Imagens/logo.png" alt class="logo-mobile"></a>
+            <a href="javascript:void(0)" class="dropdown"><i class="far fa-clock"></i>
+                <span>Aberto até às 23h</span> 
+                <div class="dropdown-content">
+                    <p class="corPrimaria">Todos os dias das 11 às 15h e 18 às 23h</p>
+                </div>
+                <i class="fas fa-angle-down"></i>
+            </a>
+            <a href="entrar.html"><i class="fa fa-fw fa-user"></i> Meus Pedidos</a>
+        </nav>
+    </div>
+
+    <div class="horario">
+        <span class="horario-funcionamento">
+            <span class="relogio-icon">
+                <i class="far fa-clock"></i>
+            </span>
+
+        <span class="horarios">
+                <h3>Horário de funcionamento</h3>
+                <p>Todos os dias das 11 às 15h e 18 às 23h</p>
+            </span>
+        </span>
+    </div>
+
+    <div class="container">
+        <div class="menu">
+            <div class="menu-nav">
+                <ul id="menu-nav">
+                    <li>
+                        <a href="#entradas" id="link1" class="menu-links active">Entradas</a>
+                    </li>
+                    <li>
+                        <a href="#frango" id="link2" class="menu-links">Frango</a>
+                    </li>
+                    <li>
+                        <a href="#carne" id="link3" class="menu-links">Carne</a>
+                    </li>
+                    <li>
+                        <a href="#peixes" id="link4" class="menu-links">Peixes e Camarões</a>
+                    </li>
+                    <li>
+                        <a href="#macarroes" id="link5" class="menu-links">Macarrões e Arroz</a>
+                    </li>
+                    <li>
+                        <a href="#sopa" id="link6" class="menu-links">Sopas</a>
+                    </li>
+                    <li>
+                        <a href="#sobremesas" id="link7" class="menu-links">Sobremesas</a>
+                    </li>
+                    <li class="menu-search">
+                        <input type="text" placeholder="Pesquisar... " id="pesquisaProdutos">
+                        <!--<i class="fas fa-search"></i>-->
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <span class="cardapio-titulo"> 
+            Cardápio: Culinária Chinesa
+        </span>
+    </div>
+
+    <!--
+        COMEÇO DO CARDÁPIO
+    -->
+
+    <!-- Entradas: Linha 1 -->
+
+    <div class="row" id="row1">
+        <div class="gallery">
+            <a target="_blank" href="../Imagens/salada.jpg">
+                <img src="../Imagens/salada.jpg" alt="Salada Mista">
+            </a>
+            <div class="title">Salada Mista (2 pessoas)</div>
+            <div class="desc">
+                Cenoura, repolho e pimentão desfiados, azeitona, ovos de codorna e rodelas de tomate.
+            </div>
+            <div class="preco" style="color: #d32b28; font-weight: bold;">
+                R$ 13,50
+                <button type="submit">Adicionar</button>
+            </div>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="../Imagens/batata_frita.jpeg">
+                <img src="../Imagens/batata_frita.jpeg" alt="Batata Frita">
+            </a>
+            <div class="title">Batata Frita<br>(2 pessoas)</div>
+            <div class="desc">
+                Batata palito.
+            </div><br><br><br>
+            <div class="preco">
+                R$ 17,00
+                <button type="submit">Adicionar</button>
+            </div>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="../Imagens/egg_roll.jpg">
+                <img src="../Imagens/egg_roll.jpg" alt="Rolinho de Queijo">
+            </a>
+            <div class="title">Rolinho de Queijo</div>
+            <div class="desc">
+                Massa fina e crocante, recheada com queijo prato.
+            </div><br>
+            <div class="preco">
+                R$ 3,50
+                <button type="submit">Adicionar</button>
+            </div>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="../Imagens/egg_roll.jpg">
+                <img src="../Imagens/egg_roll.jpg" alt="Rolinho Primavera">
+            </a>
+            <div class="title">Rolinho Primaveira</div>
+            <div class="desc">
+                Massa fina e crocante, recheada com carne moída, repolho e cenoura desfiados.
+            </div>
+            <div class="preco" style="color: #d32b28; font-weight: bold;">
+                R$ 3,50
+                <button type="submit">Adicionar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botão para ver mais pratos tipo entradas -->
+    <div class="row">
+        <br>
+        <div style="text-align: center">
+            <input type="submit" id="botaoMais1" value="Mais">
+        </div>
+    </div>
+
+    <!-- Entradas: Linha 2 -->
+    <div class="row" id="row2">
+        <div class="gallery">
+            <a target="_blank" href="../Imagens/egg_roll_2.jpg">
+                <img src="../Imagens/egg_roll_2.jpg" alt="Rolinho Romeu e Julieta">
+            </a>
+            <div class="title">Rolinho Romeu e Julieta</div>
+            <br>
+            <div class="desc">
+                Massa fina e crocante, recheada com queijo prato e doce de goiaba.
+            </div>
+            <div class="preco">
+                R$ 3,50
+                <button type="submit">Adicionar</button>
+            </div>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="../Imagens/pao_chines.jpg">
+                <img src="../Imagens/pao_chines.jpg" alt="Bolinha de Porco">
+            </a>
+            <div class="title">Bolinha de Porco<br>(10 unidades)</div>
+            <div class="desc">
+                Massa feita de batata com recheio de alface e carne de porco.
+            </div>
+            <div class="preco">
+                R$ 18,00
+                <button type="submit">Adicionar</button>
+            </div>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="../Imagens/pao_chines_3.jpg">
+                <img src="../Imagens/pao_chines_3.jpg" alt="Bolinha de Cenoura">
+            </a>
+            <div class="title">Bolinha de Cenoura<br>(10 unidades)</div>
+            <div class="desc">
+                Massa de trigo com recheio de cenoura e coentro. Prato vegano.
+            </div>
+            <div class="preco">
+                R$ 20,00
+                <button type="submit">
+                        Adicionar
+                    </button>
+            </div>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="../Imagens/wonton.jpg">
+                <img src="../Imagens/wonton.jpg" alt="Wonton Apimentado">
+            </a>
+            <div class="title">Wonton Apimentado</div>
+            <br>
+            <div class="desc">
+                Massa de castanha com recheio de pimentas variadas.
+            </div>
+            <div class="preco">
+                R$ 14,00
+                <button type="submit">
+                        Adicionar
+                    </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botão para ver mais pratos tipo entradas -->
+    <div class="row">
+        <br>
+        <div style="text-align: center">
+            <input type="submit" id="botaoMais2" value="Mais">
+        </div>
+    </div>
+
+    <!-- Entradas: Linha 3 -->
+    <div class="row" id="row3">
+        <div class="gallery">
+            <a target="_blank" href="../Imagens/pao_chines.jpg">
+                <img src="../Imagens/pao_chines.jpg" alt="Bolinha do Nepal">
+            </a>
+            <div class="title">Bolinha do Nepal</div>
+            <div class="desc">
+                Massa de batata recheada com ricota e espinafre.
+            </div>
+            <div class="preco">
+                R$ 18,00
+                <button type="submit">Adicionar</button>
+            </div>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="../Imagens/tofu.jpg">
+                <img src="../Imagens/tofu.jpg" alt="Tofu Frito com Arroz" width="600" height="400">
+            </a>
+            <div class="title">Tofu Frito com Arroz</div>
+            <div class="desc">
+                Tofu frito a temperatura baixa com molho oriental.
+            </div>
+            <div class="preco">
+                R$ 23,00
+                <button type="submit">Adicionar</button>
+            </div>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="../Imagens/pao_chines_2.jpg">
+                <img src="../Imagens/pao_chines_2.jpg" alt="Pão Chinês">
+            </a>
+            <div class="title">Pão Chinês Cozido no Vapor</div>
+            <div class="desc">
+                Massa de farinha de trigo branca e úmida.
+            </div>
+            <div class="preco">
+                R$ 5,00
+                <button type="submit">Adicionar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pratos com frango: Linha 4 -->
+    <div class="row row4" id="row4">
+        <div class="gallery">
+            <a target="_blank" frango href="../Imagens/moo_goo_gai_pan.jpg">
+                <img src="../Imagens/moo_goo_gai_pan.jpg" alt="Moo Goo Gai Pan">
+            </a>
+            <div class="title">Moo Goo<br>Gai Pan</div>
+            <div class="desc">
+                Frango em cubos com cogumelo branco e salada.
+            </div><br><br>
+            <div class="preco">
+                R$ 10,00
+                <button type="submit">Adicionar</button>
+            </div>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="../Imagens/fatia_de_frango.jpg">
+                <img src="../Imagens/fatia_de_frango.jpg" alt="Fatia de Frango">
+            </a>
+            <div class="title">Fatia de Frango</div>
+            <div class="desc">
+                Filé de peito de frango ao molho de soja com champgnon e chuchu.
+            </div><br>
+            <div class="preco">
+                R$ 49,40
+                <button type="submit">Adicionar</button>
+            </div>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="../Imagens/yakisoba.jpg">
+                <img src="../Imagens/yakisoba.jpg" alt="Yakisoba com Frango">
+            </a>
+            <div class="title">Yakisoba Com Frango</div>
+            <div class="desc">
+                Macarrão espaguete com frango, cenoura, repolho, pimentão, chuchu desfiado e brócolis ao molho yakissoba.
+            </div>
+            <div class="preco">
+                R$ 46,00
+                <button type="submit">Adicionar</button>
+            </div>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="../Imagens/frango_xadrez.jpg">
+                <img src="../Imagens/frango_xadrez.jpg" alt="Frango Xadrez">
+            </a>
+            <div class="title">Frango Xadrez</div>
+            <div class="desc">
+                Filé de coza ao molho de soja e castanha.
+            </div><br><br>
+            <div class="preco" style="color: #d32b28; font-weight: bold;">
+                R$ 20,00
+                <button type="submit">Adicionar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pratos com carne: Linha 5 -->
+    <div class="row row5" id="row5">
+        <div class="gallery">
+            <a target="_blank" href="../Imagens/carne_de_porco.jpg">
+                <img src="../Imagens/carne_de_porco.jpg" alt="Carne de Porco">
+            </a>
+            <div class="title">Carne de Porco</div>
+            <div class="desc">
+                Fatia de carne de porco ao molho de soja com repolho, pimentão e pimenta.
+            </div>
+            <div class="preco">
+                R$ 52,40
+                <button type="submit">Adicionar</button>
+            </div>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="../Imagens/vaca_desfiada.jpg">
+                <img src="../Imagens/vaca_desfiada.jpg" alt="Carne de Vaca Desfiada">
+            </a>
+            <div class="title">Carne de Vaca Desfiada</div>
+            <div class="desc">
+                Carne desfiada ao molho de soja com cebola.
+            </div>
+            <div class="preco">
+                R$ 42,40
+                <button type="submit">Adicionar</button>
+            </div>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="../Imagens/fatia_de_carne_de_vaca.jpg">
+                <img src="../Imagens/fatia_de_carne_de_vaca.jpg" alt="Fatia de Carne de Vaca">
+            </a>
+            <div class="title">Fatia de Carne de Vaca</div>
+            <div class="desc">
+                Carne fatiada ao molho de soja com brocólis e champignon.
+            </div>
+            <div class="preco">
+                R$ 52,40
+                <button type="submit">Adicionar</button>
+            </div>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="../Imagens/yakisoba.jpg">
+                <img src="../Imagens/yakisoba.jpg" alt="Yakisoba com Carne">
+            </a>
+            <div class="title">Yakisoba Com Carne</div>
+            <div class="desc">
+                Macarrão espaguete com carne, repolho, pimentão, chuchu desfiado e brócolis ao molho yakisoba.
+            </div>
+            <div class="preco">
+                R$ 46,00
+                <button type="submit">Adicionar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pratos com camarão e peixe: Linha 6 -->
+    <div class="row row6" id="row6">
+        <div class="gallery">
+            <a target="_blank" href="../Imagens/camarão.jpg">
+                <img src="../Imagens/camarão.jpg" alt="Camarão">
+            </a>
+            <div class="title">Camarão</div>
+            <br><br>
+            <div class="desc">
+                Camarão cozido.
+            </div><br><br>
+            <div class="preco" style="color: #d32b28; font-weight: bold;">
+                R$ 20,00
+                <button type="submit">Adicionar</button>
+            </div>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="../Imagens/file_de_peixe_crocante.jpg">
+                <img src="../Imagens/file_de_peixe_crocante.jpg" alt="Filé de Peixe Crocante">
+            </a>
+            <div class="title">Filé de Peixe Crocante</div>
+            <br>
+            <div class="desc">
+                Filé de peixe empanado na farinha panko.
+            </div>
+            <div class="preco">
+                R$ 80,50
+                <button type="submit">Adicionar</button>
+            </div>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="../Imagens/file_de_peixe_soja.jpg">
+                <img src="../Imagens/file_de_peixe_soja.jpg" alt="Filé de Peixe ao Molho de Soja">
+            </a>
+            <div class="title">Filé de Peixe ao Molho de Soja</div>
+            <div class="desc">
+                File de peixe à milanesa com legumes variados ao molho de soja.
+            </div>
+            <div class="preco">
+                R$ 44,00
+                <button type="submit">Adicionar</button>
+            </div>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="../Imagens/file_peixe_tomate.jpg">
+                <img src="../Imagens/file_peixe_tomate.jpg" alt="Filé de Peixe ao Molho de Tomate">
+            </a>
+            <div class="title">Filé de Peixe ao Molho de Tomate</div>
+            <div class="desc">
+                File de peixe à milanesa ao molho de tomate.
+            </div>
+            <div class="preco">
+                R$ 44,00
+                <button type="submit">Adicionar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botão para ver mais pratos com camarão e peixe -->
+    <div class="row">
+        <br>
+        <div style="text-align: center">
+            <input type="submit" id="botaoMais3" value="Mais">
+        </div>
+    </div>
+
+
+    <!-- Pratos com camarão e peixe: Linha 7 -->
+    <div class="row" id="row7">
+        <div class="gallery">
+            <a target="_blank" href="../Imagens/camarao_crocante.jpg">
+                <img src="../Imagens/camarao_crocante.jpg" alt="Camarão Crocante">
+            </a>
+            <div class="title">Camarão Crocante</div>
+            <br>
+            <div class="desc">
+                Filé de camarão empanado na farinha panko.
+            </div><br>
+            <div class="preco">
+                R$ 86,00
+                <button type="submit">Adicionar</button>
+            </div>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="../Imagens/yakisoba.jpg">
+                <img src="../Imagens/yakisoba.jpg" alt="Yakisoba Com Camarão">
+            </a>
+            <div class="title">Yakisoba Com Camarão</div>
+            <div class="desc">
+                Macarrão espaguete com filé de camarão, cenoura, repolho, pimentão, chuchu desfiado e brócolis ao molho yakisoba.
+            </div>
+            <div class="preco">
+                R$ 62,00
+                <button type="submit">Adicionar</button>
+            </div>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="../Imagens/camarao_soja.jpg">
+                <img src="../Imagens/camarao_soja.jpg" alt="Filé de Camarão ao Molho de Soja">
+            </a>
+            <div class="title">Filé de Camarão ao Molho de Soja</div>
+            <div class="desc">
+                Filé de camarão, acelga, cenoura, brocólis e cogumelo ao molho de soja.
+            </div>
+            <div class="preco">
+                R$ 57,50
+                <button type="submit">Adicionar</button>
+            </div>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="../Imagens/camarao_tomate.jpg">
+                <img src="../Imagens/camarao_tomate.jpg" alt="Filé de Camarão ao Molho de Tomate">
+            </a>
+            <div class="title">Filé de Camarão ao Molho de Tomate</div>
+            <div class="desc">
+                File de camarão, tomate, cebola e gengibre ao molho de tomate.
+            </div>
+            <div class="preco">
+                R$ 57,50
+                <button type="submit">Adicionar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pratos com macarrões e arroz: Linha 8 -->
+    <div class="row row8" id="row8">
+        <div class="gallery">
+            <a target="_blank" href="../Imagens/bifum.jpg">
+                <img src="../Imagens/bifum.jpg" alt="Bifum">
+            </a>
+            <div class="title">Bifum</div>
+            <div class="desc">
+                Macarrão feito com camarão, ovo, cebola, pimentão, carne e frango desfiado.
+            </div><br><br>
+            <div class="preco" style="color: #d32b28; font-weight: bold;">
+                R$ 20,00
+                <button type="submit">Adicionar</button>
+            </div>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="../Imagens/macarrao.jpg">
+                <img src="../Imagens/macarrao.jpg" alt="Macarrão">
+            </a>
+            <div class="title">Macarrão</div>
+            <div class="desc">
+                Macarrão talharim, filé de camarão com legumes desfiados aos molho de soja.
+            </div><br><br>
+            <div class="preco">
+                R$ 62,80
+                <button type="submit">Adicionar</button>
+            </div>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="../Imagens/yakisoba.jpg">
+                <img src="../Imagens/yakisoba.jpg" alt="Yakisoba Tradicional">
+            </a>
+            <div class="title">Yakisoba Tradicional</div>
+            <div class="desc">
+                Macarrão espaguete com carne, frango, camarão, cenoura, repolho, pimentão, chuchu desfiado e brócolis ao molho yakissoba.
+            </div>
+            <div class="preco">
+                R$ 20,00
+                <button type="submit">Adicionar</button>
+            </div>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="../Imagens/arroz.jpg">
+                <img src="../Imagens/arroz.jpg" alt="Arroz">
+            </a>
+            <div class="title">Arroz</div>
+            <br>
+            <div class="desc">
+                Arroz branco.
+            </div><br><br><br><br>
+            <div class="preco">
+                R$ 10,10
+                <button type="submit">Adicionar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sopas: Linha 9 -->
+    <div class="row row9" id="row9">
+        <div class="gallery">
+            <a target="_blank" href="../Imagens/sopa.jpg">
+                <img src="../Imagens/sopa.jpg" alt="Sopa">
+            </a>
+            <div class="title">Sopa</div>
+            <div class="desc">
+                Couve-flor, chuchu, cenoura e frango ao molho branco.
+            </div>
+            <div class="preco">
+                R$ 26,70
+                <button type="submit">Adicionar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sobremesas: Linha 10 -->
+    <div class="row row10" id="row10">
+        <div class="gallery">
+            <a target="_blank" href="../Imagens/switch.jpg">
+                <img src="../Imagens/switch.jpg" alt="Switch Roll">
+            </a>
+            <div class="title">Switch Roll<br>(8 unidades)</div>
+            <div class="desc">
+                Massa Haromaki, banana, cream cheese e bola de sorvete.
+            </div>
+            <div class="preco">
+                R$ 43,00
+                <button type="submit">Adicionar</button>
+            </div>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="../Imagens/abacaxi.jpg">
+                <img src="../Imagens/abacaxi.jpg" alt="Abacaxi Caramelado">
+            </a>
+            <div class="title">Abacaxi Caramelado</div>
+            <div class="desc">
+                Pedaço de abacaxi empanado e caramelado.
+            </div>
+            <div class="preco">
+                R$ 10,80
+                <button type="submit">Adicionar</button>
+            </div>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="../Imagens/banana.jpg">
+                <img src="../Imagens/banana.jpg" alt="Banana Caramelada">
+            </a>
+            <div class="title">Banana Caramelada</div>
+            <div class="desc">
+                Pedaço de banana empanada e caramelada.
+            </div>
+            <div class="preco">
+                R$ 10,80
+                <button type="submit">Adicionar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+
+    <footer class="rodape">
+        <ul>
+            <li>
+                <i class="rodape-item-1 fab fa-whatsapp"></i> (88) 9.9287-1532
+                <i class="rodape-item-2 fas fa-calendar-day"></i> Fundado em: Abril de 2008.
+                <i class="rodape-item-3 fas fa-map-marker-alt"></i> Universidade Federal do Ceará.
+            </li>
+            <li>
+                <i class="rodape-item-1 fas fa-file-code"></i> Powered by: Bárbara Stéph. Neves.
+            </li>
+            <li class="rodape-content">
+                <i class="rodape-content"></i>2019 © Todos os direitos reservados.
+            </li>
+        </ul>
+    </footer>
+
+    <!-- Script para a ativação dos links do menu do cardápio -->
+    <script>
+        var menu = document.getElementById("menu-nav");
+        var links = menu.getElementsByClassName("menu-links");
+
+        for (var i = 0; i < links.length; i++) {
+            links[i].addEventListener("click", function() {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+    </script>
+
+    <!-- Script para os botões da página -->
+    <script>
+        //Iniciando
+        $(document).ready(function() {
+            $('#row2').hide();
+            $('#row3').hide();
+            $('#row4').hide();
+            $('#row5').hide();
+            $('#row6').hide();
+            $('#row7').hide();
+            $('#row8').hide();
+            $('#row9').hide();
+            $('#row10').hide();
+            $('#botaoMais2').hide();
+            $('#botaoMais3').hide();
+        });
+
+        //Botões mais pratos tipo Entradas
+        $('#botaoMais1').click(function() {
+            $('#row2').show("slow");
+            $('#botaoMais1').hide();
+            $('#botaoMais2').show();
+        });
+
+        $('#botaoMais2').click(function() {
+            $('#row3').show("slow");
+            $('#botaoMais2').hide();
+        });
+
+        //Botões mais pratos com Camarão e Peixe
+        $('#botaoMais3').click(function() {
+            $('#row7').show("slow");
+            $('#botaoMais3').hide();
+        });
+
+        //Pratos tipo Entradas
+        $('#link1').click(function() {
+            $('#row1').show("slow");
+            $('#botaoMais1').show("slow");
+            $('#row2').hide();
+            $('#row3').hide();
+            $('#row4').hide();
+            $('#row5').hide();
+            $('#row6').hide();
+            $('#row7').hide();
+            $('#row8').hide();
+            $('#row9').hide();
+            $('#row10').hide();
+            $('#botaoMais2').hide();
+            $('#botaoMais3').hide();
+        });
+
+        //Pratos com Frago
+        $('#link2').click(function() {
+            $('#row1').hide();
+            $('#botaoMais1').hide();
+            $('#row2').hide();
+            $('#row3').hide();
+            $('#row4').show("slow");
+            $('#row5').hide();
+            $('#row6').hide();
+            $('#row7').hide();
+            $('#row8').hide();
+            $('#row9').hide();
+            $('#row10').hide();
+            $('#botaoMais2').hide();
+            $('#botaoMais3').hide();
+        });
+
+        //Pratos com Carne
+        $('#link3').click(function() {
+            $('#row1').hide();
+            $('#botaoMais1').hide();
+            $('#row2').hide();
+            $('#row3').hide();
+            $('#row4').hide();
+            $('#row5').show("slow");
+            $('#row6').hide();
+            $('#row7').hide();
+            $('#row8').hide();
+            $('#row9').hide();
+            $('#row10').hide();
+            $('#botaoMais2').hide();
+            $('#botaoMais3').hide();
+        });
+
+        //Pratos com Peixes e Camarões
+        $('#link4').click(function() {
+            $('#row1').hide();
+            $('#botaoMais1').hide();
+            $('#row2').hide();
+            $('#row3').hide();
+            $('#row4').hide();
+            $('#row5').hide();
+            $('#row6').show("slow");
+            $('#botaoMais3').show("slow");
+            $('#row7').hide();
+            $('#row8').hide();
+            $('#row9').hide();
+            $('#row10').hide();
+            $('#botaoMais2').hide();
+        });
+
+        //Pratos com Macarrões e Arroz
+        $('#link5').click(function() {
+            $('#row1').hide();
+            $('#botaoMais1').hide();
+            $('#row2').hide();
+            $('#row3').hide();
+            $('#row4').hide();
+            $('#row6').hide();
+            $('#row7').hide();
+            $('#row8').show("slow");
+            $('#row9').hide();
+            $('#row10').hide();
+            $('#botaoMais2').hide();
+            $('#botaoMais3').hide();
+        });
+
+        //Sopas
+        $('#link6').click(function() {
+            $('#row1').hide();
+            $('#botaoMais1').hide();
+            $('#row2').hide();
+            $('#row3').hide();
+            $('#row4').hide();
+            $('#row6').hide();
+            $('#row7').hide();
+            $('#row8').hide();
+            $('#row9').show("slow");
+            $('#row10').hide();
+            $('#botaoMais2').hide();
+            $('#botaoMais3').hide();
+        });
+
+        //Sobremesas
+        $('#link7').click(function() {
+            $('#row1').hide();
+            $('#botaoMais1').hide();
+            $('#row2').hide();
+            $('#row3').hide();
+            $('#row4').hide();
+            $('#row6').hide();
+            $('#row7').hide();
+            $('#row8').hide();
+            $('#row9').hide();
+            $('#row10').show("slow");
+            $('#botaoMais2').hide();
+            $('#botaoMais3').hide();
+        });
+    </script>
+</body>
+
+</html>
