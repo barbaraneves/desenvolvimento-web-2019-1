@@ -47,3 +47,7 @@ A classe proprietário possui os seguintes atributos:
 4. E-mail;
 
 ### Tópico 7: Spring Boot
+
+### Tópico 8: Trabalho 1
+
+Front-End do Trabalho 1.
