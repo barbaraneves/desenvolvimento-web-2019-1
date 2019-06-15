@@ -2,22 +2,22 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-	<meta charset="UTF-8">
-	<title>Formulário</title>
+<meta charset="UTF-8">
+<title>Formulário</title>
 </head>
 
 <body>
 
-	<form action="/pessoa/salvar" method="POST" th:object="${pessoa}">
-		<input type="hidden" th:field="*{codigo}">
-	
-		Nome: <input type="text" th:field="*{nome}"> <br>
-			
+	<form action="/pessoa/salvar" method="POST" th:object="${pessoa}"
+		enctype="multipart/form-data">
+		<input type="hidden" th:field="*{codigo}"> Nome: <input
+			type="text" th:field="*{nome}"> <br>
+
 		<!-- O nome do input tem que está igual ao que é pedido no name -->
-		Serie: <input type="text" th:field="*{serie}"> <br>
-		
-		Data de Nascimento: <input type="text" th:field="*{dataNascimento}"> <br>
-		
+		Serie: <input type="text" th:field="*{serie}"> <br> Data
+		de Nascimento: <input type="text" th:field="*{dataNascimento}">
+		<br> Imagem: <input type="file" name="imagem"> <br>
+
 		<input type="submit" value="Cadastrar">
 	</form>
 

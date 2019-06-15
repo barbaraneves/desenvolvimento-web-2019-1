@@ -31,6 +31,7 @@
 				<td><a
 					th:href="@{/pessoa/excluir/{codigo}(codigo = ${pessoa.codigo})}"
 					class="btn btn-danger">Excluir </a></td>
+				<td> <img width="200" height="200" th:src="@{'/imagens/'+${pessoa.nome}+.png}"> </td>
 
 			</tr>
 		</tbody>

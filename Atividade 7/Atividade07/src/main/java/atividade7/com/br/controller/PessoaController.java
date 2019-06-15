@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import atividade7.com.br.model.Pessoa;
@@ -29,12 +31,14 @@ public class PessoaController {
 	}
 	
 	@RequestMapping("/salvar")
-	public String salvarPessoa(Pessoa pessoa) {
+	public ModelAndView salvarPessoa(Pessoa pessoa, @RequestParam(value="imagem") MultipartFile imagem) {
 		
 		//Cadastrando um pessoa no banco
-		pessoaService.cadastrar(pessoa);
+		pessoaService.cadastrar(pessoa, imagem);
 		
-		return "Sucesso";
+		ModelAndView mv = new ModelAndView("Sucesso");
+		
+		return mv;
 	}
 	
 	@RequestMapping("/lista-de-pessoas")
