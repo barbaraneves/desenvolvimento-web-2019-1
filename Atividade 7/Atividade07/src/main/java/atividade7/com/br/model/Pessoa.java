@@ -1,9 +1,15 @@
 package atividade7.com.br.model;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.TemporalType;
+import javax.persistence.Temporal;
+
+import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
 public class Pessoa {
@@ -15,6 +21,18 @@ public class Pessoa {
 	private String nome;
 	private String serie;
 	
+	@DateTimeFormat(pattern = "dd/MM/yyyy")
+	@Temporal(TemporalType.DATE)
+	private Date dataNascimento;
+	
+	public Date getDataNascimento() {
+		return dataNascimento;
+	}
+
+	public void setDataNascimento(Date dataNascimento) {
+		this.dataNascimento = dataNascimento;
+	}
+
 	public Long getCodigo() {
 		return codigo;
 	}

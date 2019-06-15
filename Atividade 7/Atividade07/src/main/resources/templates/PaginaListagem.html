@@ -24,6 +24,7 @@
 				<td th:text="${pessoa.codigo}"></td>
 				<td th:text="${pessoa.nome}"></td>
 				<td th:text="${pessoa.serie}"></td>
+				<td th:text="${{pessoa.dataNascimento}}"></td>
 				<td><a
 					th:href="@{/pessoa/atualizar/{codigo}(codigo = ${pessoa.codigo})}"
 					class="btn btn-warning">Atualizar </a></td>
