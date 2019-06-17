@@ -4,14 +4,30 @@
 <head>
 <meta charset="UTF-8">
 <title>Formulário</title>
+
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
 </head>
 
 <body>
 
 	<form action="/pessoa/salvar" method="POST" th:object="${pessoa}"
 		enctype="multipart/form-data">
-		<input type="hidden" th:field="*{codigo}"> Nome: <input
-			type="text" th:field="*{nome}"> <br>
+		
+		<div class="alert alert-success" role="alert"
+			th:if="${!#strings.isEmpty(mensagem)}">
+			<span th:text="${mensagem}"></span>
+		</div>
+		
+		<div class="alert alert-danger" role="alert"
+			th:if="${#fields.hasAnyErrors()}">
+			<div th:each="detailedError : ${#fields.detailedErrors()}">
+				<span th:text="${detailedError.message}"></span>
+			</div>
+		</div>
+		
+		<input type="hidden" th:field="*{codigo}"> 
+		
+		Nome: <input type="text" th:field="*{nome}"> <br>
 
 		<!-- O nome do input tem que está igual ao que é pedido no name -->
 		Serie: <input type="text" th:field="*{serie}"> <br> Data
