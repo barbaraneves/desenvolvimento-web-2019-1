@@ -8,4 +8,5 @@ import atividade7.com.br.model.Pessoa;
 @Repository
 public interface PessoaRepository extends JpaRepository<Pessoa, Long> {
 	
+	Pessoa findByLogin(String Login);
 }

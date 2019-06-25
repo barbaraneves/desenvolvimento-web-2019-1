@@ -1,41 +1,62 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-
 <head>
 <meta charset="UTF-8">
 <title>Formulário</title>
 
-<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+
 </head>
-
 <body>
+			Formulário de Cadastro de Pessoas
 
-	<form action="/pessoa/salvar" method="POST" th:object="${pessoa}"
-		enctype="multipart/form-data">
-		
+
+	<form action="/pessoa/salvar" method="POST"
+		enctype="multipart/form-data" th:object="${pessoa}">
+		<input type="hidden" th:field="*{codigo}">
+
+
 		<div class="alert alert-success" role="alert"
 			th:if="${!#strings.isEmpty(mensagem)}">
 			<span th:text="${mensagem}"></span>
 		</div>
-		
-		<div class="alert alert-danger" role="alert"
-			th:if="${#fields.hasAnyErrors()}">
+
+		<div class="alert alert-danger" th:if="${#fields.hasAnyErrors()}">
 			<div th:each="detailedError : ${#fields.detailedErrors()}">
-				<span th:text="${detailedError.message}"></span>
+				<span th:text="${detailedError.message}"> </span>
 			</div>
 		</div>
-		
-		<input type="hidden" th:field="*{codigo}"> 
-		
+
 		Nome: <input type="text" th:field="*{nome}"> <br>
 
-		<!-- O nome do input tem que está igual ao que é pedido no name -->
-		Serie: <input type="text" th:field="*{serie}"> <br> Data
-		de Nascimento: <input type="text" th:field="*{dataNascimento}">
-		<br> Imagem: <input type="file" name="imagem"> <br>
+		<!-- <div th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}" class="alert alert-danger">
+            <p>Name is invalid</p>
+            </div> -->
 
-		<input type="submit" value="Cadastrar">
+		Série de TV: <input type="text" th:field="*{serie}"> <br> Data de
+		Nascimento <input type="text" th:field="*{dataNascimento}"> <br>
+
+		Imagem: <input type="file" name="imagem"> <br> 
+
+
+		<div class="form-group">
+			<label for="usernameLabel">Username:</label> <input type="text"
+				class="form-control" th:field="*{login}">
+		</div>
+
+		<div class="form-group">
+			<label for="passwordLabel">Password:</label> <input type="password"
+				class="form-control" th:field="*{senha}">
+		</div>
+	
+	
+	
+	<input type="submit" value="Cadastrar">
+
 	</form>
+
+
+	<script src="/js/bootstrap.min.js">  </script>
 
 </body>
 </html>

@@ -32,6 +32,14 @@ public class PessoaController {
 		return mv;
 	}
 	
+	@RequestMapping("/index")
+	public ModelAndView paginaHome() {
+
+		ModelAndView mv = new ModelAndView("Index");
+		
+		return mv;
+	}
+	
 	@RequestMapping("/salvar")
 	public ModelAndView salvarPessoa(@Validated Pessoa pessoa, BindingResult result, @RequestParam(value="imagem") MultipartFile imagem) {
 		
@@ -79,6 +87,14 @@ public class PessoaController {
 		ModelAndView mv = new ModelAndView("Formulario");
 		mv.addObject("pessoa", pessoa);
 		
+		return mv;
+	}
+	
+	@RequestMapping("/login")
+	public ModelAndView paginaLogin() {
+		
+		ModelAndView mv = new ModelAndView("Login");
+			
 		return mv;
 	}
 
